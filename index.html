@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Farmland Market</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container">
+        <h1 class="brand">Three Springs Farmland</h1>
+        <p class="tagline">Fresh produce and farm goods, straight from our fields.</p>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="hero">
+        <h2>What we have for sale</h2>
+        <p>Seasonal vegetables, dairy, eggs, honey and more. Browse below and click "Buy" to place an order.</p>
+
+        <div class="filters" role="tablist" aria-label="Product filters">
+          <button class="filter-btn active" data-cat="all">All</button>
+          <button class="filter-btn" data-cat="animals">Animals</button>
+          <button class="filter-btn" data-cat="eggs">Eggs</button>
+          <button class="filter-btn" data-cat="arts">Arts &amp; Crafts</button>
+        </div>
+
+        <div class="search-row">
+          <input id="search" placeholder="Search products (eggs, milk, tomatoes)" />
+        </div>
+      </section>
+
+      <section id="products" class="products-grid" aria-live="polite">
+        <!-- Products will be rendered here by script.js -->
+      </section>
+
+      <section class="contact">
+        <h3>Contact / Orders</h3>
+        <p>Email us to place an order or request pickup/delivery:</p>
+        <p><a id="contactEmail" href="mailto:info@threesprings.example">info@threesprings.example</a></p>
+        <p>Phone: <a href="tel:+10000000000">(000) 000-0000</a></p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">© Three Springs Farmland</div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

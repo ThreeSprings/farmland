@@ -1,14 +1,10 @@
 const products = [
   {id:1,name:'Farm Eggs (dozen)',price:'$4.50',category:'eggs'},
   {id:2,name:'Whole Milk (1L)',price:'$3.25',category:'animals'},
-  {id:3,name:'Heirloom Tomatoes (lb)',price:'$2.75',category:'produce'},
-  {id:4,name:'Raw Honey (12oz)',price:'$9.00',category:'produce'},
-  {id:5,name:'Mixed Vegetables (box)',price:'$12.00',category:'produce'},
-  {id:6,name:'Handmade Soap',price:'$6.00',category:'arts'}
+  {id:3,name:'Handmade Soap',price:'$6.00',category:'arts'}
 ];
 
 const productsEl = document.getElementById('products');
-const searchEl = document.getElementById('search');
 const filterBtns = Array.from(document.querySelectorAll('.filter-btn'));
 let activeCategory = 'all';
 
@@ -52,10 +48,8 @@ function render(list){
 }
 
 function applyFilters(){
-  const q = searchEl.value.trim().toLowerCase();
   let list = products.slice();
   if(activeCategory !== 'all') list = list.filter(p=>p.category === activeCategory);
-  if(q) list = list.filter(p=> (p.name + ' ' + p.desc + ' ' + (p.category||'')).toLowerCase().includes(q));
   render(list);
 }
 
@@ -68,7 +62,5 @@ filterBtns.forEach(b=>{
   });
 });
 
-searchEl.addEventListener('input', ()=>{ applyFilters(); });
-
 // initialize
-render(products);
+applyFilters();

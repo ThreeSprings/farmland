@@ -12,8 +12,7 @@ body{font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif;margin:0;backg
 .brand{margin:0;font-size:1.6rem}
 .tagline{margin:6px 0 0;color:rgba(255,255,255,0.9)}
 .hero{padding:18px 0}
-.search-row{margin-top:12px}
-#search{width:100%;padding:10px;border-radius:6px;border:1px solid #ddd}
+.filters{display:flex;gap:8px;margin-top:12px;flex-wrap:wrap}
 .filters{display:flex;gap:8px;margin-top:12px;flex-wrap:wrap}
 .filter-btn{background:#fff;border:1px solid #ddd;padding:8px 12px;border-radius:6px;cursor:pointer}
 .filter-btn.active{background:var(--accent);color:#fff;border-color:transparent}
@@ -36,7 +35,6 @@ body{font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif;margin:0;backg
   .card{width:100% !important;min-width:0;padding:12px}
   .product-image{height:120px !important;border-radius:6px;margin-bottom:10px}
   .filter-btn{flex:1;padding:10px 12px}
-  #search{padding:12px}
 }
 
 @media (min-width: 601px) and (max-width: 1000px){
